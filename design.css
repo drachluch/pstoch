@@ -1,0 +1,67 @@
+body {
+    margin: 20px;
+    font-size: 20px;
+    background-color: #AFAFDC;
+}
+
+table {
+	display: block;
+	margin-bottom : 10px;
+}
+
+footer {
+    padding: 5px;
+}
+
+input[type=text] {
+	width: 100px;
+}
+
+/* SVG */
+
+svg {
+	background-color: white;
+}
+
+.svgbigtitle {
+	
+}
+
+.label {
+	
+}
+
+.label_bottom {
+	
+}
+
+.label_left {
+	
+}
+
+.axes {
+	stroke: black;
+	stroke-width: 10;
+	stroke-linecap: square;
+	fill: none;
+}
+
+.horizontal_line {
+	stroke: gray;
+	stroke-width: 5;
+	stroke-linecap: square;
+}
+
+.histogram_part {
+	stroke: black;
+	stroke-width: 1;
+	stroke-linecap: square;
+	fill: #0000ff;
+}
+
+g text {
+	dominant-baseline: middle;
+}
+
+
+

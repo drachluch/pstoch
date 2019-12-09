@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="design.css" title="default" media="screen">
+		<link rel="icon" type="image/png" href="image/ble.png">
+		<title>P. Stoch. M|M|S</title>
+	</head>
+	<body>
+		<h2>File d'attente M|M|S avec &lambda; et &mu; constants</h2>
+		<p>
+			<table>
+				<tr>
+					<td><label for="lambda" title="Taux de naissance">&lambda; <i>>0</i> :</label></td>
+					<td><input type="text" id="lambda" value="NaN" /></td>
+				</tr>
+				<tr>
+					<td><label for="mu" title="Taux de décès">&mu; <i>>0</i> :</label></td>
+					<td><input type="text" id="mu" value="NaN" /></td>
+				</tr>
+				<tr>
+					<td><label for="s" title="Nombre de serveurs">S <i>> 0</i> :</label></td>
+					<td><input type="text" id="s" value="NaN" /></td>
+				</tr>
+			</table>
+		</p>
+		<p>
+			<table>
+				<tr>
+					<td>&rho; <i>(= &lambda; / (s * &mu;) &lt; 1)</i> :</td>
+					<td id="results_rho">NaN</td>
+				</tr>
+				<tr>
+					<td title="Probabilité de trouver le système vide">q<sub>0</sub> :</td>
+					<td id="results_q0">NaN</td>
+				</tr>
+				<tr>
+					<td title="Nombre moyen de clients dans le système">L :</td>
+					<td id="results_l">NaN</td>
+				</tr>
+				<tr>
+					<td title="Nombre moyen de clients en attente sans service">L<sub>q</sub> :</td>
+					<td id="results_lq">NaN</td>
+				</tr>
+				<tr>
+					<td title="Durée moyenne de séjour dans le système">W :</td>
+					<td id="results_w">NaN</td>
+				</tr>
+				<tr>
+					<td title="Durée moyenne d'attente sans service">W<sub>q</sub> :</td>
+					<td id="results_wq">NaN</td>
+				</tr>
+				<tr>
+					<td title="Probabilité d'être servi immédiatement">P(&tau;<sub>q</sub> = 0) :</td>
+					<td id="results_prob_no_wait">NaN</td>
+				</tr>
+			</table>
+		</p>
+		<p>
+			<table>
+				<tr>
+					<td><label for="drawgraph">Tracer le graphe</label> :</td>
+					<td><input type="checkbox" id="drawgraph" /></td>
+				</tr>
+				<tr>
+					<td><label for="graph_nbstates">Nombre d'états représentées</label> <i>(> 0)</i> :</td>
+					<td><input type="text" id="graph_nbstates" value="10" /></td>
+				</tr>
+				<tr>
+					<td><label for="graph_offset">Premier état représenté</label> <i>(&#x2265 0)</i> :</td>
+					<td><input type="text" id="graph_offset" value="0" /></td>
+				</tr>
+			</table>
+		</p>
+		
+		<section id="graph"></section>
+		
+		<footer>Simon Moulard, 21 octobre 2019, 2 novembre 2019.</footer>
+		
+		<script language="javascript" src="js/graph/svg.js"></script>
+		<script language="javascript" src="js/initmms.js"></script>
+	</body>
+</html>
